@@ -5,10 +5,10 @@ set -x
 CC=clang++
 
 # compile compiler
-$CC arith.cc -o arith
+$CC arith.cc
 
 # execute
-./arith
+./a.out "3"
 
 # clean up
-rm arith
+rm a.out
