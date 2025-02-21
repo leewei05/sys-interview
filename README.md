@@ -2,7 +2,7 @@
 
 ## C
 
-- [Implement memcpy() in C](./memcpy/README.md)
+- [Implement memcpy() in C](./c/README.md)
 - Implement a coroutine with setjump/longjump in C
 - Implement strcpy() in C
 
