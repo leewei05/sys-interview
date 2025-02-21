@@ -2,15 +2,15 @@
 
 ## C
 
-- [Implement memcpy() in C](./c/README.md)
+- [Implement memcpy in C](./c/README.md#implement-memcpy)
 - Implement a coroutine with setjump/longjump in C
-- Implement strcpy() in C
+- Implement strcpy in C
 
 ## OS
 
 - How to boot an OS?
 - How a C program starts executing
-- What is a process?
+- [What is a process?](./os/README.md#what-is-a-process)
 
 ## Compilers
 
