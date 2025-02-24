@@ -64,4 +64,12 @@ entry:
 
 ### GlobalIsel
 
+GlobalISel is a framework that translates LLVM IR to Machine IR (MIR). Global means the entire function, instead of a single basic block. ISel is a short term for instruction selection.
 
+What does it do?
+- IR Translation
+- Legalization: replace unsupported instructions to supported ones.
+- Register bank selector
+- Instruction selection: selects targeted ISA instructions from gMIR.
+
+### SelectionDAG

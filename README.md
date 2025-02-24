@@ -3,19 +3,20 @@
 ## C
 
 - [Implement memcpy in C](./c/README.md#implement-memcpy)
+- [Implement strcpy in C](./c/README.md#implement-strcpy)
+- Implement malloc in C
 - Implement a coroutine with setjump/longjump in C
-- Implement strcpy in C
 
 ## OS
 
+- [What is a process?](./os/README.md#what-is-a-process)
 - How to boot an OS?
 - How a C program starts executing
-- [What is a process?](./os/README.md#what-is-a-process)
 
 ## Compilers
 
-- Optimize matrix multiplication
 - [Implement a simple compiler that can do four arithmetic operations(+, -, * /)](./compilers/README.md#implement-a-compiler-with-four-arithmetic-operations)
+- Optimize matrix multiplication
 - Implement register allocation
 
 ### LLVM
@@ -26,3 +27,4 @@
 - SSA form, phi nodes, CFG, dominator tree
 - SelectionDAG
 - How does LLVM lower LLVM IR to MIR?
+- What is Machine IR?
