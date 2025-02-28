@@ -73,3 +73,11 @@ What does it do?
 - Instruction selection: selects targeted ISA instructions from gMIR.
 
 ### SelectionDAG
+
+SelectionDAG is a data representation, direct-acyclic graph. LLVM translates LLVM IR into SelectionDAG to lower into machine instructions. It is used to target multiple backends, including x86, NVPTX etc.
+
+Each node consists of type and operations.
+
+### llvm-reduce
+
+
