@@ -57,4 +57,55 @@ printf("exec error\n"); // This line will not execute if exec succeeds.
 
 This is basically how a shell is implemented.
 
+### What is a file descriptor?
 
+A file descriptor is an integer that represents an I/O object that we can read from or write to. There are 3 built-in file descriptors in Unix: stdin 0, stdout 1, stderr 2.
+
+I/O redirection can be implemented by playing with file descriptors.
+
+```c
+char *argv[2];
+argv[0] = "cat";
+argv[1] = 0;
+
+if(fork() == 0) {
+    close(0);
+    open("input.txt", O_RDONLY);
+    exec("cat", argv);
+}
+```
+
+The code above is the implementation of `cat < input.txt`. Newly created file descriptor starts from the lowest available integer in the system. If we close(0) first, then open() a file. open() will return 0 as its new file descriptor.
+
+### What is a pipe?
+
+A pipe is a kernel buffer that bridges two processes.
+
+```c
+int p[2];
+char *argv[2];
+argv[0] = "wc";
+argv[1] = 0;
+
+pipe(p);
+if(fork() == 0) { // child
+    close(0);
+    dup(p[0]);    // child stdin reads from pipe
+    close(p[0]);  // close both read, write from pipe
+    close(p[1]);  // or else both ends won't receive EOF
+    exec("/bin/wc", argv);
+} else { // parent
+    close(p[0]);  // parent closes read pipe
+    write(p[1], "hello world\n", 12);
+    close(p[1]);
+}
+```
+
+Pipeline can be implemented without pipe. `cat input.txt | wc` is the same as `cat input.txt > /tmp/t; wc < /tmp/t`. However, having pipe can have multiple advantages.
+
+1. Pipe cleans up themselves. With the second approach, we have to remove the temporary file ourselves.
+1. Pipe can pass arbitrary data, while file direction needs enough space on disk.
+1. Pipe allows parallel execution, while the second approach needs to execute in sequence.
+1. Pipe's blocking read write is more efficient than non-blocking files for inter-process communication.
+
+// TODO: pipe blocking
