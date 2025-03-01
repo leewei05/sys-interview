@@ -17,7 +17,7 @@
 - [What is a file descriptor?](./os/README.md#what-is-a-file-descriptor)
 - [What is a pipe?](./os/README.md#what-is-a-pipe)
 - [How to boot an OS?](./os/README.md#how-to-boot-an-os)
-- Why do we need page tables?
+- [What is paging?](./os/README.md#what-is-paging)
 - Implement read, write system call
 - Implement fork system call
 - What is context switch? How to implement it?

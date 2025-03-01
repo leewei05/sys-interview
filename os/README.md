@@ -6,9 +6,6 @@ How to separate user space and kernel space?
 
 The kernel uses the CPU's hardware protection mechanisms to ensure that each process in user space can only access its own memory space.
 
-// TODO
-This protection mechanism uses cr3 register in x86.
-
 ### What is a process?
 
 By definition, a process is a running program. Here's a process struct if we want to implement process in an OS. Whenever the kernel switches an available CPU to a waiting process, the current running process' context is saved, and the waiting process' context is restored to run.
@@ -134,3 +131,11 @@ The following is specific for booting xv6 on i386.
 - Set up page directory and enable paging
 - Set up stack pointer esp
 - Jump to main()
+
+### What is paging?
+
+Paging is a technique that OS uses to enforce isolation between processes.
+
+CR3 register in x86 is the page directory base register. The value is updated by the OS whenever a process is scheduled to run.
+
+The paging hardware uses the upper 20 bits to locate the entry in the page table.
