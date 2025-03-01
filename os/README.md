@@ -109,3 +109,28 @@ Pipeline can be implemented without pipe. `cat input.txt | wc` is the same as `c
 1. Pipe's blocking read write is more efficient than non-blocking files for inter-process communication.
 
 // TODO: pipe blocking
+
+### How to boot an OS?
+
+The following is specific for booting xv6 on i386.
+
+- Power on
+- Execute BIOS(ROM)
+- BIOS loads the bootloader(512 bytes) at 0x7c00 to 0x7e00 and jumps to that address
+- Processor starts off in real mode(16 bits)
+    - disable processor interrupts
+    - zero segment registers
+- Switch to protected mode(32 bits)
+    - setup segment descriptor table `gdt`
+    - enables protected mode
+- Set up stack at 0x7c00($start) as top of the stack, grows down to 0x0000
+- Call into C bootmain
+    - load the first 4096 bytes of the kernel at 0x10000
+    - check if this is valid ELF
+    - Load xv6 kernel from disk to memory, zero the remainder segment
+        - kernel address is linked at 0x80100000(virtual)
+        - kernel physical address starts at 0x100000
+- Jump kernel entry
+- Set up page directory and enable paging
+- Set up stack pointer esp
+- Jump to main()
