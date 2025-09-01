@@ -12,7 +12,8 @@
 ## C++
 
 - [RAII](./cpp/README.md#RAII)
-- [Smart Pointers](./cpp/README.md##)
+- [Smart Pointers](./cpp/README.md##smart-pointers)
+- [Move Semantics](./cpp/README.md##move-semantics)
 
 ## Compilers
 
