@@ -9,6 +9,36 @@
 - How a C program starts executing?
 - What is crt0?
 
+## CPP
+
+- [RAII](./cpp/README.md#RAII)
+
+## Compilers
+
+- [Implement a simple compiler that can do four arithmetic operations(+, -, * /)](./compilers/README.md#implement-a-compiler-with-four-arithmetic-operations)
+- [C-reduce](./compilers/README.md#creduce)
+- Optimize matrix multiplication
+- Implement register allocation
+- What is SSA?
+- What is Polyhedral Compilation?
+
+### LLVM
+
+- [What does `getelementptr` do?](./compilers/llvm/README.md#getelementptr)
+- [What is GlobalISel? What does it do?](./compilers/llvm/README.md#globalisel)
+- [What is SelectionDAG?](./compilers/llvm/README.md#selectiondag)
+- [llvm-reduce: LLVM automatic testcase reducer](./compilers/llvm/README.md#llvm-reduce)
+- Explain some target independent optimizations
+- SSA form, phi nodes, CFG, dominator tree
+- How does LLVM lower LLVM IR to MIR?
+- What is Machine IR?
+- What is data layout in LLVM IR?
+- Explain SSA in LLVM IR
+
+### MLIR
+
+- [What is MLIR?](./compiles/mlir/README.md#what-is-mlir)
+
 ## OS
 
 - [OS interface](./os/README.md#os-interface)
@@ -22,21 +52,3 @@
 - Implement fork system call
 - What is context switch? How to implement it?
 - What is a file system?
-
-## Compilers
-
-- [Implement a simple compiler that can do four arithmetic operations(+, -, * /)](./compilers/README.md#implement-a-compiler-with-four-arithmetic-operations)
-- [C-reduce](./compilers/README.md#creduce)
-- Optimize matrix multiplication
-- Implement register allocation
-
-### LLVM
-
-- [What does `getelementptr` do?](./compilers/llvm/README.md#getelementptr)
-- [What is GlobalISel? What does it do?](./compilers/llvm/README.md#globalisel)
-- [What is SelectionDAG?](./compilers/llvm/README.md#selectiondag)
-- [llvm-reduce: LLVM automatic testcase reducer](./compilers/llvm/README.md#llvm-reduce)
-- Explain some target independent optimizations
-- SSA form, phi nodes, CFG, dominator tree
-- How does LLVM lower LLVM IR to MIR?
-- What is Machine IR?
