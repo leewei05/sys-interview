@@ -9,9 +9,10 @@
 - How a C program starts executing?
 - What is crt0?
 
-## CPP
+## C++
 
 - [RAII](./cpp/README.md#RAII)
+- [Smart Pointers](./cpp/README.md##)
 
 ## Compilers
 

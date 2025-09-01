@@ -2,3 +2,11 @@
 
 Resource Acquisition is Initialization (RAII) is a C++ idiom where acquisition of a resource is tied to the initialization of an object.
 **The lifetime of a resource is managed by the object's lifetime.**
+
+### Smart Pointers
+
+Smart Pointers are a direct application of RAII. They are used for managing dynamically allocated memory. Smart Pointers wrap raw pointers and ensure the memory is automatically deallocated when the smart pointer object is destroyed.
+
+- `std::unique_ptr` has exclusive ownership. It cannot be copied, only moved. Only one `std::unique_ptr` can own a raw pointer at a time.
+- `std::shared_ptr` has a shared ownership. Multiple `std::shared_ptr` can own the same raw pointer. The resource is deallocated when the last reference is destroyed.
+- `std::weak_ptr` is a **non-owning** smart pointer that works with `std::shared_ptr`. There can be a memory leak if there's a circular references with `std::shared_ptr`. [Example](https://godbolt.org/z/q1TfdzxP7).
