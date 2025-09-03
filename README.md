@@ -20,9 +20,8 @@
 
 - [Implement a simple compiler that can do four arithmetic operations(+, -, * /)](./compilers/README.md#implement-a-compiler-with-four-arithmetic-operations)
 - [What is SSA?](./compilers/README.md#SSA)
-- [What is Polyhedral Compilation?](./compilers/README.md#polyhedral)
+- [What is Polyhedral Compilation?](./compilers/README.md#polyhedral-compilation)
 - Optimize matrix multiplication
-- Implement register allocation
 
 ### LLVM
 
@@ -30,10 +29,9 @@
 - [What is GlobalISel? What does it do?](./compilers/llvm/README.md#globalisel)
 - [What is SelectionDAG?](./compilers/llvm/README.md#selectiondag)
 - [SSA in LLVM](./compilers/llvm/README.md#ssa-in-llvm)
+- [How does LLVM lower LLVM IR to MIR?](./compilers/llvm/README.md#how-does-llvm-lower-llvm-ir-to-mir)
 - Explain some target independent optimizations
 - CFG, dominator tree
-- How does LLVM lower LLVM IR to MIR?
-- What is Machine IR?
 - What is data layout in LLVM IR?
 
 ### MLIR

@@ -81,3 +81,13 @@ Each node consists of type and operations.
 ### SSA in LLVM
 
 SSA simplifies data-flow analysis in LLVM. There's no need to track whether a variable might have be redefined. Since every variable has a single definition, tracing the use to the definition is simple. SSA also empowers some optimization passes, such as, CSE, LICM.
+
+### How does LLVM lower LLVM IR to MIR
+
+LLVM goes through a "backend code generation process" to lower LLVM IR to MIR. This process coverts high-level, target-independent IR into a target-specific IR (MIR) that can be used to generate machine code.
+
+The key steps are the following:
+
+- Instruction Selection: a pattern matching process to convert LLVM IR into target-specific machine instructions.
+- Instruction Scheduling: this stage reorders machine instructions to reduce stalls and improve pipeline utilizations on the target CPU.
+- Register Allocation: this stage maps the infinite number of virtual registers to the finite number of physical registers on the target CPU. Its goal is to avoid "spill" as much as possible.
