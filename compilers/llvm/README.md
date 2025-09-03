@@ -91,3 +91,17 @@ The key steps are the following:
 - Instruction Selection: a pattern matching process to convert LLVM IR into target-specific machine instructions.
 - Instruction Scheduling: this stage reorders machine instructions to reduce stalls and improve pipeline utilizations on the target CPU.
 - Register Allocation: this stage maps the infinite number of virtual registers to the finite number of physical registers on the target CPU. Its goal is to avoid "spill" as much as possible.
+
+### Data Layout
+
+LLVM IR is a target-independent representation. To help compiler make correct decision, Clang (frontend) generates certain details about the target's memory model, which is the data layout.
+
+- Object sizes and alignments
+- Pointer sizes
+- Endianness
+- Provide memory-related info for memory-related optimizations
+
+```
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-pc-linux-gnu"
+```

@@ -30,9 +30,9 @@
 - [What is SelectionDAG?](./compilers/llvm/README.md#selectiondag)
 - [SSA in LLVM](./compilers/llvm/README.md#ssa-in-llvm)
 - [How does LLVM lower LLVM IR to MIR?](./compilers/llvm/README.md#how-does-llvm-lower-llvm-ir-to-mir)
+- [What is data layout in LLVM IR?](./compilers/llvm/README.md#data-layout)
 - Explain some target independent optimizations
 - CFG, dominator tree
-- What is data layout in LLVM IR?
 
 ### MLIR
 
