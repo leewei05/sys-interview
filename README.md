@@ -14,6 +14,7 @@
 - [RAII](./cpp/README.md#RAII)
 - [Smart Pointers](./cpp/README.md##smart-pointers)
 - [Move Semantics](./cpp/README.md##move-semantics)
+- [Const and Constexpr](./cpp/README.md##const-and-constexpr)
 
 ## Compilers
 

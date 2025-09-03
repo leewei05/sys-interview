@@ -20,3 +20,11 @@ The purpose of Move Semantics is to **avoid expensive, unnecessary data copies**
 - Move Constructor/Assignment Operator: these operations takes an rvalue as a source and hand over the resources from the source object. The source object is left in a valid but unspecified state, often empty or NULL.
 
 `std::move` does not change ownership or move anything, instead, it is a **static cast**. It coverts an lvalue into an rvalue reference. `std::move` is a zero-cost abstraction.
+
+### Const and Constexpr
+
+- `const` guarantees a variable is read-only after initialization, either at compile-time or run-time. Compiler might not know the value of a constant until the program is running.
+- `constexpr` guarantees a variable's value must be computable at compile-time. Compiler knows the exact value of constexpr.
+
+In the [Example](https://godbolt.org/z/6jM1q68Tv), the value of `result` is hard-coded in the instruction.
+
