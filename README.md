@@ -20,9 +20,9 @@
 
 - [Implement a simple compiler that can do four arithmetic operations(+, -, * /)](./compilers/README.md#implement-a-compiler-with-four-arithmetic-operations)
 - [What is SSA?](./compilers/README.md#SSA)
+- [What is Polyhedral Compilation?](./compilers/README.md#polyhedral)
 - Optimize matrix multiplication
 - Implement register allocation
-- What is Polyhedral Compilation?
 
 ### LLVM
 

@@ -12,3 +12,9 @@ Static Single Assignment (SSA) is a form of an IR where each variable is assigne
 - Each variable has only one definition.
 - Use-Definition chains are good for analysis.
 - Phi Functions merge multiple control flow paths and choose the correct source path.
+
+### Polyhedral Compilation
+
+Polyhedral compilation is a mathematical framework for optimizing programs with **nested loops and array access**.
+
+The core idea is to represent nested loop as a geometric shape called a **polyhedron**. Instead of analyzing dependencies between individual statements, polyhedral compilation analyzes depedencies between these iteration points (polyhedrons).
