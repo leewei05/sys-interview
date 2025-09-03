@@ -78,6 +78,6 @@ SelectionDAG is a data representation, direct-acyclic graph. LLVM translates LLV
 
 Each node consists of type and operations.
 
-### llvm-reduce
+### SSA in LLVM
 
-
+SSA simplifies data-flow analysis in LLVM. There's no need to track whether a variable might have be redefined. Since every variable has a single definition, tracing the use to the definition is simple. SSA also empowers some optimization passes, such as, CSE, LICM.
