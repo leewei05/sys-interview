@@ -50,4 +50,4 @@ Lambdas are particularly useful when you need a short, simple function for a lim
 
 Lambdas can be more easily inlined by the compilers.
 
-### 
+In C++14, Generic Lambdas allow developers to use `auto` in the parameter lists.
