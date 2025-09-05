@@ -28,3 +28,6 @@ The purpose of Move Semantics is to **avoid expensive, unnecessary data copies**
 
 In the [Example](https://godbolt.org/z/6jM1q68Tv), the value of `result` is hard-coded in the instruction.
 
+### Atomic
+
+`std::atomic` provides a type-safe way to use these operations. Atomic operations or variables are guaranteed to be completed without being interrupted by another thread.

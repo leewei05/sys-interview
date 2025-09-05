@@ -12,9 +12,10 @@
 ## C++
 
 - [RAII](./cpp/README.md#RAII)
-- [Smart Pointers](./cpp/README.md##smart-pointers)
-- [Move Semantics](./cpp/README.md##move-semantics)
-- [Const and Constexpr](./cpp/README.md##const-and-constexpr)
+- [Smart Pointers](./cpp/README.md#smart-pointers)
+- [Move Semantics](./cpp/README.md#move-semantics)
+- [Const and Constexpr](./cpp/README.md#const-and-constexpr)
+- [Atomic](./cpp/README.md#atomic)
 
 ## Compilers
 
@@ -22,6 +23,7 @@
 - [What is SSA?](./compilers/README.md#SSA)
 - [What is Polyhedral Compilation?](./compilers/README.md#polyhedral-compilation)
 - Optimize matrix multiplication
+- volatile
 
 ### LLVM
 
@@ -51,3 +53,8 @@
 - Implement fork system call
 - What is context switch? How to implement it?
 - What is a file system?
+
+## Misc
+
+- SIMD
+- Vertical, Horizontal
