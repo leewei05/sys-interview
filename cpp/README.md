@@ -98,3 +98,13 @@ The key difference is when the condition is evaluated:
 Here is an [example](https://godbolt.org/z/b67zPsKqv) of using `if constexpr` inside a template function.
 
 Without `if constexpr`, a similar template function would fail to compile because, for example, you can't stream a `std::vector` to `std::cout` with `<<` by default, and all branches of a regular `if` must be valid. `if constexpr` avoids this by discarding the invalid branches at compile-time.
+
+### std::optional
+
+Introduced in C++17, `std::optional` is a wrapper that may or may not contain a value. It is a vocabulary type for representing an optional value, which is useful for functions that might fail to return a value.
+
+Before `std::optional`, developers often used special values (like `nullptr` or `-1`) or a pair of a boolean and a value to indicate the absence of a value. `std::optional` provides a cleaner, more expressive, and safer way to handle such cases.
+
+Here's an [example](https://godbolt.org/z/PYrhTdc6o).
+
+Using `std::optional` helps to avoid ambiguity and makes the code's intent clearer.

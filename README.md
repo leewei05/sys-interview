@@ -19,6 +19,7 @@
 - [Lambda Expressions](./cpp/README.md#lambda-expressions)
 - [Structured Bindings](./cpp/README.md#structured-bindings)
 - [if constexpr](./cpp/README.md#if-constexpr)
+- [std::optional](./cpp/README.md#stdoptional)
 
 ## Compilers
 
