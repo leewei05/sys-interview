@@ -43,6 +43,7 @@
 ### MLIR
 
 - [What is MLIR?](./compiles/mlir/README.md#what-is-mlir)
+- [What problem does MLIR solve](./compilers/mlir/README.md#what-problem-does-mlir-solve)
 
 ## OS
 
