@@ -73,3 +73,11 @@ Lambdas are particularly useful when you need a short, simple function for a lim
 Lambdas can be more easily inlined by the compilers.
 
 In C++14, Generic Lambdas allow developers to use `auto` in the parameter lists.
+
+### Structured Bindings
+
+Introduced in C++17, structured bindings allow for a more convenient and readable way to unpack and assign values from tuples, pairs, or structs. It simplifies the process of creating multiple variables from a single compound object.
+
+Here's an [example](https://godbolt.org/z/xsvfjcz8E) using a `std::tuple`.
+
+This feature makes the code cleaner and less error-prone, as you don't need to use `std::get` with indices, which can be a source of bugs.
