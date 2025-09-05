@@ -17,6 +17,8 @@
 - [Const and Constexpr](./cpp/README.md#const-and-constexpr)
 - [Atomic](./cpp/README.md#atomic)
 - [Lambda Expressions](./cpp/README.md#lambda-expressions)
+- [Structured Bindings](./cpp/README.md#structured-bindings)
+- [if constexpr](./cpp/README.md#if-constexpr)
 
 ## Compilers
 

@@ -81,3 +81,20 @@ Introduced in C++17, structured bindings allow for a more convenient and readabl
 Here's an [example](https://godbolt.org/z/xsvfjcz8E) using a `std::tuple`.
 
 This feature makes the code cleaner and less error-prone, as you don't need to use `std::get` with indices, which can be a source of bugs.
+
+### if constexpr
+
+Introduced in C++17, `if constexpr` allows for compile-time conditional branching based on constant expressions. This is particularly useful in template metaprogramming.
+
+#### `if constexpr` vs. `if`
+
+The key difference is when the condition is evaluated:
+
+- **`if`**: The condition is evaluated at **run-time**. Both branches of the `if-else` statement must be valid and compilable, even if one branch is never executed.
+- **`if constexpr`**: The condition is evaluated at **compile-time**. The compiler will discard the branch that is not taken. This means the code in the discarded branch doesn't need to be valid for the given template parameters.
+
+#### `if constexpr` in a Template Function
+
+Here is an [example](https://godbolt.org/z/b67zPsKqv) of using `if constexpr` inside a template function.
+
+Without `if constexpr`, a similar template function would fail to compile because, for example, you can't stream a `std::vector` to `std::cout` with `<<` by default, and all branches of a regular `if` must be valid. `if constexpr` avoids this by discarding the invalid branches at compile-time.
