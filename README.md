@@ -54,7 +54,8 @@
 - What is context switch? How to implement it?
 - What is a file system?
 
-## Misc
+## Computer Architecture
 
-- SIMD
-- Vertical, Horizontal
+- [Memory Ordering](./arch/README.md#memory-ordering)
+- [SIMD](./arch/README.md#simd)
+- [SIMT](./arch/README.md#simt)
