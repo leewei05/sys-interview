@@ -31,3 +31,23 @@ In the [Example](https://godbolt.org/z/6jM1q68Tv), the value of `result` is hard
 ### Atomic
 
 `std::atomic` provides a type-safe way to use these operations. Atomic operations or variables are guaranteed to be completed without being interrupted by another thread.
+
+### Lambda Expressions
+
+A lambda expression is an unnamed function object capable of capturing variables in scope. It's a concise way to create simple function objects that can be passed as arguments to algorithms or other functions.
+
+**When to use Lambda Expressions:**
+
+Lambdas are particularly useful when you need a short, simple function for a limited scope, and you don't want to define a full, named function elsewhere. They are commonly used with Standard Library algorithms like `std::sort`, `std::for_each`, and `std::find_if`.
+
+**Lambdas vs. Functions:**
+
+| Feature | Lambda | Function |
+| :--- | :--- | :--- |
+| **Definition** | Can be defined inline, right where it's needed. | Must be defined in a specific scope (e.g., global, namespace, or class). |
+| **State** | Can capture and store state from the surrounding scope (closure). | Cannot capture local state from the calling scope. |
+| **Verbosity**| Less verbose, more concise for simple operations. | More verbose, requires a full function definition. |
+
+Lambdas can be more easily inlined by the compilers.
+
+### 

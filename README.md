@@ -16,6 +16,7 @@
 - [Move Semantics](./cpp/README.md#move-semantics)
 - [Const and Constexpr](./cpp/README.md#const-and-constexpr)
 - [Atomic](./cpp/README.md#atomic)
+- [Lambda Expressions](./cpp/README.md#lambda-expressions)
 
 ## Compilers
 
