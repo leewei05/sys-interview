@@ -11,6 +11,28 @@ Smart Pointers are a direct application of RAII. They are used for managing dyna
 - `std::shared_ptr` has a shared ownership. Multiple `std::shared_ptr` can own the same raw pointer. The resource is deallocated when the last reference is destroyed.
 - `std::weak_ptr` is a **non-owning** smart pointer that works with `std::shared_ptr`. There can be a memory leak if there's a circular references with `std::shared_ptr`. [Example](https://godbolt.org/z/q1TfdzxP7).
 
+#### `std::make_unique`
+
+Introduced in C++14, `std::make_unique` is the recommended way to create instances of `std::unique_ptr`.
+
+```cpp
+// Instead of this:
+std::unique_ptr<MyClass> ptr(new MyClass(arg1, arg2));
+
+// Prefer this:
+auto ptr = std::make_unique<MyClass>(arg1, arg2);
+```
+
+`std::make_unique` solves a subtle exception-safety problem. Consider a function call like this:
+
+```cpp
+foo(std::unique_ptr<T>(new T), function_that_might_throw());
+```
+
+The compiler is allowed to evaluate arguments in any order. It might first evaluate `new T`, then `function_that_might_throw()`, and only then call the `std::unique_ptr` constructor. If `function_that_might_throw()` throws an exception, the memory allocated for `T` is leaked because no smart pointer has taken ownership of it yet.
+
+`std::make_unique` prevents this by ensuring that memory allocation and `std::unique_ptr` construction happen together in a single function call, which cannot be interleaved with other argument evaluations. This guarantees that the resource is properly managed even in the presence of exceptions.
+
 ### Move Semantics
 
 The purpose of Move Semantics is to **avoid expensive, unnecessary data copies**.
