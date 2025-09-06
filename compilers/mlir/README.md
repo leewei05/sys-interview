@@ -9,3 +9,7 @@ It is a framework for building compilers. More specifically, MLIR is an infrastr
 ### What problem does MLIR solve?
 
 The key problem MLIR solves is the limitations of a single-level IR like LLVM IR for complex domains like machine learning and hardware accelerators. While LLVM IR is great for low-level, CPU-centric optimizations, it's a poor fit for representing high-level concepts like tensors, matrix multiplications, and hardware-specific memory layouts. **MLIR was designed to handle these domain-specific abstractions.**
+
+### Operation Definition Specification
+
+Operation Definition Specification (ODS) is a framework that defines `ops` in a table-driven way. Without it, we would need to define our operations from `mlir::Op` C++ template.
