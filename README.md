@@ -21,6 +21,7 @@
 - [if constexpr](./cpp/README.md#if-constexpr)
 - [std::optional](./cpp/README.md#stdoptional)
 - [Access Specifiers](./cpp/README.md#access-specifiers)
+- [Virtual Function and Vtable](./cpp/README.md#virtual-function-and-vtable)
 
 ## Compilers
 

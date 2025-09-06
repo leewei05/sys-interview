@@ -116,3 +116,16 @@ In C++, access specifiers are keywords that define the accessibility of class me
 - `public`: Members are accessible from any part of the program. This is the least restrictive access level.
 - `private`: Members are only accessible from within the class itself. This is the most restrictive access level. By default, members of a class are private.
 - `protected`: Members are accessible from within the class and by derived (child) classes. They are not accessible by unrelated code.
+
+### Virtual Function and Vtable
+
+A **virtual function** is a member function that you expect to be redefined in derived classes. When you refer to a derived class object using a pointer or a reference to the base class, you can call a virtual function for that object and execute the derived class's version of the function. This is the essence of **polymorphism**.
+
+There are two types of virtual functions:
+
+- **Normal Virtual Function**: A virtual function that has an implementation in the base class.
+- **Pure Virtual Function**: A virtual function that has no implementation in the base class and must be overridden in the derived class. A class with one or more pure virtual functions is called an **abstract class**.
+
+#### Vtable
+
+A **vtable** (virtual table) is a lookup table of function pointers used to resolve virtual function calls at runtime. Each class that has virtual functions has its own vtable. When an object of such a class is created, a hidden pointer to the vtable (often called a **vptr**) is added to the object. When a virtual function is called through a base class pointer, the vptr is used to find the correct function in the vtable of the derived class. This process is called **dynamic dispatch**.
