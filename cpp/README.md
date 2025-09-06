@@ -108,3 +108,11 @@ Before `std::optional`, developers often used special values (like `nullptr` or 
 Here's an [example](https://godbolt.org/z/PYrhTdc6o).
 
 Using `std::optional` helps to avoid ambiguity and makes the code's intent clearer.
+
+### Access Specifiers
+
+In C++, access specifiers are keywords that define the accessibility of class members (both attributes and methods). They are fundamental to the concept of **encapsulation**. Encapsulation is the bundling of data with the methods that operate on that data, which is used to restrict direct access to some of an object's components.
+
+- `public`: Members are accessible from any part of the program. This is the least restrictive access level.
+- `private`: Members are only accessible from within the class itself. This is the most restrictive access level. By default, members of a class are private.
+- `protected`: Members are accessible from within the class and by derived (child) classes. They are not accessible by unrelated code.
