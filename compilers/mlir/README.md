@@ -12,4 +12,8 @@ The key problem MLIR solves is the limitations of a single-level IR like LLVM IR
 
 ### Operation Definition Specification
 
-Operation Definition Specification (ODS) is a framework that defines `ops` in a table-driven way. Without it, we would need to define our operations from `mlir::Op` C++ template.
+Operation Definition Specification (ODS) is a framework for defining `ops` in a table-driven way, which offers several advantages:
+
+- **Simplified Op Definition**: Instead of manually defining operations using the `mlir::Op` C++ template, ODS allows for a more concise, table-driven approach.
+- **Automatic Verification**: The ODS framework automatically generates verification logic based on the constraints provided, ensuring that operations are well-formed.
+- **Builder Generation**: ODS can generate simple build methods for operations, and also allows for the definition of custom builders to suit specific needs.
