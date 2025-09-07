@@ -131,3 +131,12 @@ There are two types of virtual functions:
 #### Vtable
 
 A **vtable** (virtual table) is a lookup table of function pointers used to resolve virtual function calls at runtime. Each class that has virtual functions has its own vtable. When an object of such a class is created, a hidden pointer to the vtable (often called a **vptr**) is added to the object. When a virtual function is called through a base class pointer, the vptr is used to find the correct function in the vtable of the derived class. This process is called **dynamic dispatch**.
+
+### volatile
+
+The `volatile` keyword tells the compiler that a variable's value may change at any time without any action being taken by the code the compiler finds nearby. It is a directive to the compiler to suppress optimization on that variable.
+
+**Use Cases:**
+
+- **Memory-mapped I/O**: When a memory address is mapped to a device register, the value can be changed by the hardware.
+- **Variables modified by an interrupt service routine**: If a global variable is modified by an ISR, it should be declared `volatile`.
