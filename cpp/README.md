@@ -50,6 +50,8 @@ The purpose of Move Semantics is to **avoid expensive, unnecessary data copies**
 
 In the [Example](https://godbolt.org/z/6jM1q68Tv), the value of `result` is hard-coded in the instruction.
 
+> A **const member function** is a member function that promises not to modify the object's member data. It is declared by placing the `const` keyword after the function's parameter list. A key rule is that you can only call const member functions on a const object.
+
 ### Atomic
 
 `std::atomic` provides a type-safe way to use these operations. Atomic operations or variables are guaranteed to be completed without being interrupted by another thread.
