@@ -172,3 +172,21 @@ A function template is a blueprint for creating a family of functions. For examp
 A class template is a blueprint for creating a family of classes. For example, you can create a generic `Stack` class that can hold elements of any type.
 
 [Template Example](https://godbolt.org/z/5x33M6z8n)
+
+### The Rule of Three/Five/Zero
+
+These are rules of thumb in C++ for managing resources.
+
+- **The Rule of Three**: If a class defines any of the following, it should probably explicitly define all three:
+    1.  Destructor
+    2.  Copy constructor
+    3.  Copy assignment operator
+
+- **The Rule of Five**: With the introduction of move semantics in C++11, the Rule of Three is extended to the Rule of Five. If a class defines any of the five special member functions, it should probably define all of them:
+    1.  Destructor
+    2.  Copy constructor
+    3.  Copy assignment operator
+    4.  Move constructor
+    5.  Move assignment operator
+
+- **The Rule of Zero**: The best practice is to not define any of the special member functions. Instead, use smart pointers and other RAII objects to manage resources, and let the compiler generate the special member functions. This leads to cleaner and safer code.
