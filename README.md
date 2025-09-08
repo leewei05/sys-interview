@@ -11,22 +11,35 @@
 
 ## C++
 
-- [RAII](./cpp/README.md#RAII)
+### Core Concepts
+
+- [RAII](./cpp/README.md#raii)
+- [Access Specifiers](./cpp/README.md#access-specifiers)
+- [Virtual Function and Vtable](./cpp/README.md#virtual-function-and-vtable)
+- [volatile](./cpp/README.md#volatile)
+- [Iterators](./cpp/README.md#iterators)
+- [Templates](./cpp/README.md#templates)
+- [The Rule of Three/Five/Zero](./cpp/README.md#the-rule-of-threefivezero)
+
+### C++11
+
 - [Smart Pointers](./cpp/README.md#smart-pointers)
 - [Move Semantics](./cpp/README.md#move-semantics)
 - [Const and Constexpr](./cpp/README.md#const-and-constexpr)
 - [Atomic](./cpp/README.md#atomic)
 - [Lambda Expressions](./cpp/README.md#lambda-expressions)
+- [Concurrency](./cpp/README.md#concurrency)
+
+### C++14
+
+- [`std::make_unique`](./cpp/README.md#stdmake_unique)
+- [Generic Lambdas](./cpp/README.md#generic-lambdas)
+
+### C++17
+
 - [Structured Bindings](./cpp/README.md#structured-bindings)
 - [if constexpr](./cpp/README.md#if-constexpr)
-- [std::optional](./cpp/README.md#stdoptional)
-- [Access Specifiers](./cpp/README.md#access-specifiers)
-- [Virtual Function and Vtable](./cpp/README.md#virtual-function-and-vtable)
-- [Volatile](./cpp/README.md#volatile)
-- [Iterators](./cpp/README.md#iterators)
-- [Templates](./cpp/README.md#templates)
-- [The Rule of Three/Five/Zero](./cpp/README.md#the-rule-of-threefivezero)
-- [Concurrency](./cpp/README.md#concurrency)
+- [`std::optional`](./cpp/README.md#stdoptional)
 
 ## Compilers
 
