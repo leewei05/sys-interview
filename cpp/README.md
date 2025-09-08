@@ -158,6 +158,12 @@ C++11 introduced the `auto` keyword to allow the compiler to automatically deduc
 
 [Compiler Explorer Link](https://godbolt.org/z/P8fzeqTen)
 
+### `nullptr`
+
+C++11 introduced `nullptr` as a type-safe null pointer constant. It is of type `std::nullptr_t` and can be implicitly converted to any pointer type, but not to an integer type. This avoids the ambiguity of `NULL`, which is often just a macro for `0`.
+
+[Compiler Explorer Link](https://godbolt.org/z/4e6xcq54G)
+
 ## C++14
 
 #### `std::make_unique`
