@@ -32,6 +32,7 @@
 - [Range-based for loops](./cpp/README.md#range-based-for-loops)
 - [`auto` keyword](./cpp/README.md#auto-keyword)
 - [`nullptr`](./cpp/README.md#nullptr)
+- [Enum classes](./cpp/README.md#enum-classes)
 
 ### C++14
 

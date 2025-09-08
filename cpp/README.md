@@ -164,6 +164,16 @@ C++11 introduced `nullptr` as a type-safe null pointer constant. It is of type `
 
 [Compiler Explorer Link](https://godbolt.org/z/4e6xcq54G)
 
+### Enum classes
+
+C++11 introduced "enum classes" (also known as "scoped enumerations") to address some of the shortcomings of traditional C-style enums.
+
+**Key advantages:**
+- **Strongly typed**: Enum classes are not implicitly convertible to integers. This prevents accidental comparisons and assignments between different enum types.
+- **Scoped**: The enumerators are scoped within the enum class, so you don't have to worry about name clashes.
+
+[Compiler Explorer Link](https://godbolt.org/z/csaEaW334)
+
 ## C++14
 
 #### `std::make_unique`
