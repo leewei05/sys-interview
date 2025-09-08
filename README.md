@@ -30,6 +30,7 @@
 - [Lambda Expressions](./cpp/README.md#lambda-expressions)
 - [Concurrency](./cpp/README.md#concurrency)
 - [Range-based for loops](./cpp/README.md#range-based-for-loops)
+- [`auto` keyword](./cpp/README.md#auto-keyword)
 
 ### C++14
 

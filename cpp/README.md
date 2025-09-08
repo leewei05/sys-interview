@@ -152,6 +152,12 @@ C++11 introduced a new syntax for iterating over a range of elements, making the
 
 [Compiler Explorer Link](https://godbolt.org/z/8G7ooGTxo)
 
+### `auto` keyword
+
+C++11 introduced the `auto` keyword to allow the compiler to automatically deduce the type of a variable from its initializer. This can make the code more readable and less verbose, especially when dealing with complex types like iterators or template-heavy code.
+
+[Compiler Explorer Link](https://godbolt.org/z/P8fzeqTen)
+
 ## C++14
 
 #### `std::make_unique`
