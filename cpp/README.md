@@ -190,3 +190,13 @@ These are rules of thumb in C++ for managing resources.
     5.  Move assignment operator
 
 - **The Rule of Zero**: The best practice is to not define any of the special member functions. Instead, use smart pointers and other RAII objects to manage resources, and let the compiler generate the special member functions. This leads to cleaner and safer code.
+
+### Concurrency
+
+C++11 introduced standard library support for concurrency.
+
+- **`std::thread`**: A class to create and manage threads.
+- **`std::mutex`**: A mutual exclusion primitive to protect shared data from being simultaneously accessed by multiple threads.
+- **`std::lock_guard`**: A simple RAII-style wrapper for `std::mutex`. It locks the mutex in its constructor and unlocks it in its destructor.
+
+[Mutex Example](https://godbolt.org/z/eWo6n6zPW)
