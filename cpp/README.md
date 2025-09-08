@@ -180,6 +180,27 @@ C++11 introduced `std::initializer_list` to provide a uniform syntax for initial
 
 [Compiler Explorer Link](https://godbolt.org/z/YYoGvjfPb)
 
+### `std::function`
+
+`std::function` is a general-purpose polymorphic function wrapper. It can store, copy, and invoke any callable target—functions, lambda expressions, bind expressions, or other function objects.
+
+**When to use `std::function`:**
+- **Callbacks**: When you want to allow users to provide their own functions to be called when a certain event happens.
+- **Storing callables in a container**: For example, you can have a `std::vector<std::function<void()>>` that stores various functions to be executed later.
+- **Decoupling code**: It helps in writing code that doesn't need to know the exact type of the callable it's using, making your code more flexible.
+
+[Compiler Explorer Link](https://godbolt.org/z/619fzs61c)
+
+#### `std::function` vs. Function Pointers
+
+While both `std::function` and C-style function pointers can store and invoke callable entities, `std::function` offers significant advantages:
+
+-   **Type Safety**: `std::function` is type-safe, enforcing signature matching at compile time. C-style function pointers can be implicitly converted, leading to potential runtime errors.
+-   **Flexibility**: `std::function` can wrap any callable type (free functions, lambdas, function objects, member functions), whereas C-style function pointers are limited to free functions (or static member functions).
+-   **Statefulness**: `std::function` can store stateful callables (e.g., lambdas with captures), which C-style function pointers cannot.
+-   **Overhead**: `std::function` introduces some overhead due to type erasure and potential dynamic allocation, while function pointers are raw pointers with minimal overhead.
+
+
 ## C++14
 
 #### `std::make_unique`

@@ -34,6 +34,7 @@
 - [`nullptr`](./cpp/README.md#nullptr)
 - [Enum classes](./cpp/README.md#enum-classes)
 - [Initializer lists](./cpp/README.md#initializer-lists)
+- [`std::function`](./cpp/README.md#stdfunction)
 
 ### C++14
 
