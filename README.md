@@ -24,6 +24,7 @@
 - [Virtual Function and Vtable](./cpp/README.md#virtual-function-and-vtable)
 - [Volatile](./cpp/README.md#volatile)
 - [Iterators](./cpp/README.md#iterators)
+- [Templates](./cpp/README.md#templates)
 
 ## Compilers
 

@@ -158,3 +158,17 @@ C++ iterators are categorized based on their functionality. Each category builds
 - **Random Access Iterator**: The most powerful category. Provides all the features of a bidirectional iterator, plus the ability to access elements by an index in constant time (like a pointer). `std::vector` and `std::deque` provide random access iterators.
 
 [Iterator Categories Example](https://godbolt.org/z/9bKMKMPrM)
+
+### Templates
+
+Templates are a fundamental feature of C++ that allow you to write generic programs. They are blueprints that the compiler uses to generate code for different types at compile time.
+
+#### Function Templates
+
+A function template is a blueprint for creating a family of functions. For example, you can write a single `max` function that works with any type that supports the `>` operator.
+
+#### Class Templates
+
+A class template is a blueprint for creating a family of classes. For example, you can create a generic `Stack` class that can hold elements of any type.
+
+[Template Example](https://godbolt.org/z/5x33M6z8n)
