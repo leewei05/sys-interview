@@ -33,6 +33,7 @@
 - [`auto` keyword](./cpp/README.md#auto-keyword)
 - [`nullptr`](./cpp/README.md#nullptr)
 - [Enum classes](./cpp/README.md#enum-classes)
+- [Initializer lists](./cpp/README.md#initializer-lists)
 
 ### C++14
 

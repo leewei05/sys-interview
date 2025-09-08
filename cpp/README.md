@@ -174,6 +174,12 @@ C++11 introduced "enum classes" (also known as "scoped enumerations") to address
 
 [Compiler Explorer Link](https://godbolt.org/z/csaEaW334)
 
+### Initializer lists
+
+C++11 introduced `std::initializer_list` to provide a uniform syntax for initialization. It allows you to initialize objects with a list of values enclosed in curly braces `{}`.
+
+[Compiler Explorer Link](https://godbolt.org/z/YYoGvjfPb)
+
 ## C++14
 
 #### `std::make_unique`
