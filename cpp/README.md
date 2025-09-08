@@ -140,3 +140,21 @@ The `volatile` keyword tells the compiler that a variable's value may change at 
 
 - **Memory-mapped I/O**: When a memory address is mapped to a device register, the value can be changed by the hardware.
 - **Variables modified by an interrupt service routine**: If a global variable is modified by an ISR, it should be declared `volatile`.
+
+### Iterators
+
+An **iterator** is an object that acts like a generic pointer, providing a way to access elements in a container (like a `std::vector` or `std::list`) sequentially without exposing the container's underlying representation. Iterators are a key component of the C++ Standard Library, enabling generic algorithms to work with any container that provides an iterator interface.
+
+[Simple iterator example](https://godbolt.org/z/cnKKThx4b)
+
+#### Iterator Categories
+
+C++ iterators are categorized based on their functionality. Each category builds upon the previous one, adding more capabilities.
+
+- **Input Iterator**: The simplest category. Can be used to read elements from a container in a single pass. It can be incremented, but not decremented.
+- **Output Iterator**: Can be used to write elements to a container in a single pass. It can be incremented, but not decremented.
+- **Forward Iterator**: Combines the functionality of input and output iterators for single-pass algorithms. It can be incremented, but not decremented. It can be used to read from and write to the same element multiple times.
+- **Bidirectional Iterator**: Like a forward iterator, but can also be decremented. This allows for traversing the container in both directions. `std::list`, `std::set`, and `std::map` provide bidirectional iterators.
+- **Random Access Iterator**: The most powerful category. Provides all the features of a bidirectional iterator, plus the ability to access elements by an index in constant time (like a pointer). `std::vector` and `std::deque` provide random access iterators.
+
+[Iterator Categories Example](https://godbolt.org/z/9bKMKMPrM)
