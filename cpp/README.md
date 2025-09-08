@@ -146,6 +146,12 @@ C++11 introduced standard library support for concurrency.
 
 [Mutex Example](https://godbolt.org/z/eWo6n6zPW)
 
+### Range-based for loops
+
+C++11 introduced a new syntax for iterating over a range of elements, making the code more readable and less error-prone.
+
+[Compiler Explorer Link](https://godbolt.org/z/8G7ooGTxo)
+
 ## C++14
 
 #### `std::make_unique`
