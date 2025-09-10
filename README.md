@@ -48,6 +48,7 @@
 - [if constexpr](./cpp/README.md#if-constexpr)
 - [`std::optional`](./cpp/README.md#stdoptional)
 - [`std::variant`](./cpp/README.md#stdvariant)
+- [`std::string_view`](./cpp/README.md#stdstring_view)
 
 ## Compilers
 

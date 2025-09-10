@@ -303,3 +303,9 @@ Introduced in C++17, `std::variant` is a type-safe union. It is a template class
 `std::variant` is a powerful tool for representing a value that can be one of a fixed set of types. It is a sum type, as opposed to a product type like a struct or a tuple.
 
 Here's an [example](https://godbolt.org/z/eqrPnf9dj).
+
+### std::string_view
+
+Introduced in C++17, `std::string_view` is a non-owning, read-only view of a string. It provides a lightweight object that refers to a sequence of characters, but does not own the underlying data. This makes it efficient for operations that do not require modifying the string, as it avoids unnecessary memory allocations and copies.
+
+Here's an [example](https://godbolt.org/z/5x1qPMTTx).
