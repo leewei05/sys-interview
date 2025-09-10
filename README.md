@@ -40,6 +40,7 @@
 
 - [`std::make_unique`](./cpp/README.md#stdmake_unique)
 - [Generic Lambdas](./cpp/README.md#generic-lambdas)
+- [Binary Literals and Digital Separators](./cpp/README.md#binary-literals-and-digit-separators)
 
 ### C++17
 

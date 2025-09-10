@@ -252,6 +252,13 @@ The compiler is allowed to evaluate arguments in any order. It might first evalu
 
 In C++14, Generic Lambdas allow developers to use `auto` in the parameter lists.
 
+### Binary Literals and Digit Separators
+
+C++14 introduced binary literals and digit separators to make numeric literals more readable.
+
+- **Binary Literals**: You can now specify integer literals in binary format using the `0b` or `0B` prefix.
+- **Digit Separators**: You can use a single quote (`'`) as a digit separator to make long numbers more readable. The separator is ignored by the compiler.
+
 ## C++17
 
 ### Structured Bindings
