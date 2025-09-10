@@ -126,6 +126,31 @@ A lambda expression is an unnamed function object capable of capturing variables
 
 Lambdas are particularly useful when you need a short, simple function for a limited scope, and you don't want to define a full, named function elsewhere. They are commonly used with Standard Library algorithms like `std::sort`, `std::for_each`, and `std::find_if`.
 
+**Anatomy of a Lambda Expression:**
+
+```cpp
+[capture_clause](parameters) -> return_type {
+    // function body
+};
+```
+
+- **`capture_clause`**: Specifies which variables from the surrounding scope are available inside the lambda, and how they are captured (by value or by reference).
+- **`parameters`**: The parameter list for the lambda function.
+- **`return_type`**: The return type of the lambda. This is optional; the compiler can often deduce it.
+- **`function body`**: The code to be executed.
+
+**Capture Clause in Detail:**
+
+The capture clause is what makes lambdas powerful, allowing them to "remember" information from their enclosing scope.
+
+- **`[]`**: No variables are captured from the surrounding scope.
+- **`[=]`**: Capture all variables from the surrounding scope by **value**. The captured variables are read-only inside the lambda unless the lambda is declared `mutable`.
+- **`[&]`**: Capture all variables from the surrounding scope by **reference**.
+- **`[this]`**: Capture the `this` pointer by value, allowing access to member variables of the enclosing class.
+- **`[a, &b]`**: Capture `a` by value and `b` by reference.
+- **`[&, a]`**: Capture `a` by value and all other variables by reference.
+- **`[=, &a]`**: Capture `a` by reference and all other variables by value.
+
 **Lambdas vs. Functions:**
 
 | Feature | Lambda | Function |
