@@ -295,3 +295,11 @@ Before `std::optional`, developers often used special values (like `nullptr` or 
 Here's an [example](https://godbolt.org/z/PYrhTdc6o).
 
 Using `std::optional` helps to avoid ambiguity and makes the code's intent clearer.
+
+### std::variant
+
+Introduced in C++17, `std::variant` is a type-safe union. It is a template class that can hold a value of any of the types specified in the template parameter list. At any given time, a `std::variant` holds a value of one of its alternative types (or no value if it is in a valueless state, which can happen in exceptional circumstances).
+
+`std::variant` is a powerful tool for representing a value that can be one of a fixed set of types. It is a sum type, as opposed to a product type like a struct or a tuple.
+
+Here's an [example](https://godbolt.org/z/eqrPnf9dj).

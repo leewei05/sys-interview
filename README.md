@@ -47,6 +47,7 @@
 - [Structured Bindings](./cpp/README.md#structured-bindings)
 - [if constexpr](./cpp/README.md#if-constexpr)
 - [`std::optional`](./cpp/README.md#stdoptional)
+- [`std::variant`](./cpp/README.md#stdvariant)
 
 ## Compilers
 
