@@ -85,6 +85,15 @@ These are rules of thumb in C++ for managing resources.
 
 - **The Rule of Zero**: The best practice is to not define any of the special member functions. Instead, use smart pointers and other RAII objects to manage resources, and let the compiler generate the special member functions. This leads to cleaner and safer code.
 
+### Lvalues and Rvalues
+
+In C++, expressions are categorized as either lvalues or rvalues. Understanding this distinction is crucial for grasping concepts like move semantics and perfect forwarding.
+
+- **Lvalue**: An lvalue represents an object that has a persistent address in memory. You can take its address. Variables, function return values that are references, and string literals are examples of lvalues.
+- **Rvalue**: An rvalue is a temporary value that does not have a persistent address. It typically appears on the right-hand side of an assignment. Literals (except string literals), function return values that are not references, and temporary objects are examples of rvalues.
+
+Here's an [example](https://godbolt.org/z/Ken9d5hnx).
+
 ## C++11
 
 ### Smart Pointers
