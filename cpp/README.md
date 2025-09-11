@@ -94,6 +94,12 @@ In C++, expressions are categorized as either lvalues or rvalues. Understanding 
 
 Here's an [example](https://godbolt.org/z/Ken9d5hnx).
 
+### Namespaces
+
+Namespaces provide a way to group related declarations and to avoid name collisions between different parts of a program. A namespace defines a new scope, and all the names declared inside it are part of that scope.
+
+Here's an [example](https://godbolt.org/z/PW6n7jqcx).
+
 ## C++11
 
 ### Smart Pointers
