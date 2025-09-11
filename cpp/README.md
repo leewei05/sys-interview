@@ -100,6 +100,15 @@ Namespaces provide a way to group related declarations and to avoid name collisi
 
 Here's an [example](https://godbolt.org/z/PW6n7jqcx).
 
+### Casting
+
+C++ provides a set of casting operators to convert a value from one type to another. These operators provide more specific and safer alternatives to C-style casts.
+
+- **`static_cast`**: Used for conversions between related types, such as converting a pointer to a base class to a pointer to a derived class, or for explicit numeric conversions. It performs a compile-time check to ensure the conversion is possible.
+- **`dynamic_cast`**: Used for converting pointers and references to objects in a class hierarchy. It performs a run-time check to ensure the conversion is valid. If the conversion is not valid, it returns a null pointer (for pointers) or throws a `std::bad_cast` exception (for references).
+- **`const_cast`**: Used to add or remove the `const` qualifier from a variable. It is the only C++-style cast that can remove `const`.
+- **`reinterpret_cast`**: Used for low-level conversions between unrelated types, such as converting a pointer to an integer, or a pointer of one type to a pointer of another, unrelated type. It is the most dangerous cast and should be used with extreme caution.
+
 ## C++11
 
 ### Smart Pointers
