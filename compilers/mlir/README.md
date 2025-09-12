@@ -18,3 +18,11 @@ Operation Definition Specification (ODS) is a framework for defining `ops` in a 
 - **Simplified Op Definition**: Instead of manually defining operations using the `mlir::Op` C++ template, ODS allows for a more concise, table-driven approach.
 - **Automatic Verification**: The ODS framework automatically generates verification logic based on the constraints provided, ensuring that operations are well-formed.
 - **Builder Generation**: ODS can generate simple build methods for operations, and also allows for the definition of custom builders to suit specific needs.
+
+### Dialect Conversions
+
+MLIR's Dialect Conversion framework is used to transform operations from one dialect to another. To perform a conversion, you need to define a `ConversionTarget` which specifies which operations are considered legal. Then, you provide a set of `RewritePattern`s to convert any illegal operations into legal ones.
+
+A common use case is **partial lowering**, where only a subset of operations are lowered to a different dialect. For example, you might lower compute-intensive operations to the Affine and Arith dialects for optimization, while keeping other operations like a print function in the original dialect.
+
+Note that lowering from a value-type to a buffer-type representation is a common pattern in MLIR.

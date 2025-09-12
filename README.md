@@ -76,6 +76,7 @@
 - [What is MLIR?](./compiles/mlir/README.md#what-is-mlir)
 - [What problem does MLIR solve](./compilers/mlir/README.md#what-problem-does-mlir-solve)
 - [Operation Definition Specification](./compilers/mlir/README.md#operation-definition-specification)
+- [Dialect Conversions](./compilers/mlir/README.md#dialect-conversions)
 
 ## OS
 
