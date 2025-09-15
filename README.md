@@ -98,7 +98,12 @@
 - [SIMD](./arch/README.md#simd)
 - [SIMT](./arch/README.md#simt)
 - [CPU vs GPU](./arch/README.md#cpu-vs-gpu)
+- Speculative Execution
+- Instruction Pointer Prediction
 
 ### CUDA
 
 - [What is CUDA?](./arch/cuda/README.md#what-is-cuda)
+- [Streaming Multiprocessors (SMs)](./arch/cuda/README.md#streaming-multiprocessors-sms)
+- [Warps](./arch/cuda/README.md#warps)
+- [CUDA Memory Model](./arch/cuda/README.md#cuda-memory-model)
