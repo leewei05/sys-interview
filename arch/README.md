@@ -15,3 +15,13 @@
 ### SIMT
 
 **Single Instruction, Multiple Threads** is a software-level abstraction of SIMD, most famously used by NVIDIA GPUs. It presents a programming model where multiple independent threads execute the same program concurrently. The GPU hardware then groups these threads into "warps" and schedules them for execution on SIMD units.
+
+### CPU vs GPU
+
+| Feature | CPU (Central Processing Unit) | GPU (Graphics Processing Unit) |
+| :--- | :--- | :--- |
+| **Core Design** | A small number of powerful, general-purpose cores designed for low-latency execution of sequential tasks. | A large number of smaller, specialized cores designed for high-throughput parallel processing. |
+| **Architecture** | Optimized for **latency**. Each core can execute a different instruction on different data (MIMD - Multiple Instruction, Multiple Data). | Optimized for **throughput**. All cores in a streaming multiprocessor (SM) execute the same instruction on different data (SIMD - Single Instruction, Multiple Data). |
+| **Parallelism** | Best suited for **task parallelism**, where different threads perform different tasks. | Excels at **data parallelism**, where the same task is performed on a massive amount of data. |
+| **Memory Model** | Large caches to reduce latency for individual core access. | Smaller caches, but with very high-bandwidth memory to feed the large number of cores in parallel. |
+| **Use Cases** | General-purpose computing, operating systems, databases, applications requiring complex logic and fast single-thread performance. | Graphics rendering, scientific computing, machine learning, cryptocurrency mining, and other massively parallel computations. |
