@@ -20,6 +20,7 @@ CUDA provides a hierarchical memory model that allows programmers to control dat
 - **Constant Memory:** Read-only memory for all threads. It is cached and provides high-bandwidth access when all threads in a warp access the same location.
 - **Texture Memory:** Read-only memory optimized for 2D spatial access patterns.
 - **Distributed Shared Memory:** Shared memory of all thread blocks in a cluster.
+- **Unified Memory:** A single unified memory pool that is a single pointer value enables across host and device.
 
 ### Thread Hierarchy
 
