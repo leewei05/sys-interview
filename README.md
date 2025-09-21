@@ -107,3 +107,4 @@
 - [Streaming Multiprocessors (SMs)](./arch/cuda/README.md#streaming-multiprocessors-sms)
 - [Warps](./arch/cuda/README.md#warps)
 - [CUDA Memory Model](./arch/cuda/README.md#cuda-memory-model)
+- [Thread Hierarchy](./arch/cuda/README.md#thread-hierarchy)

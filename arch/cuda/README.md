@@ -19,3 +19,15 @@ CUDA provides a hierarchical memory model that allows programmers to control dat
 - **Global Memory:** The main GPU memory. It is large but has higher latency. All threads can access global memory.
 - **Constant Memory:** Read-only memory for all threads. It is cached and provides high-bandwidth access when all threads in a warp access the same location.
 - **Texture Memory:** Read-only memory optimized for 2D spatial access patterns.
+
+### Thread Hierarchy
+
+CUDA organizes threads into a three-level hierarchy:
+
+1.  **Threads:** The most basic unit of execution. Each thread executes an instance of the kernel function. Threads are identified by their `threadIdx`, which can be a 1D, 2D, or 3D index within a thread block.
+
+2.  **Thread Blocks:** A group of threads that execute together on the same Streaming Multiprocessor (SM). Threads within a block can cooperate by sharing data through a high-speed shared memory and can synchronize their execution. Thread blocks are identified by their `blockIdx` within a grid.
+
+3.  **Grid:** A collection of thread blocks that execute the same kernel. The grid is the highest level of the hierarchy. The dimensions of the grid are specified by `gridDim`.
+
+This hierarchical organization allows for scalable parallelism. The number of threads per block and the number of blocks per grid can be adjusted to fit the specific GPU architecture and the problem being solved. All threads in a grid execute the same kernel code.
