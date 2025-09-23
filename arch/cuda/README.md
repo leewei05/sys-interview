@@ -15,7 +15,7 @@ A warp is a group of 32 threads that are executed simultaneously by a Streaming 
 CUDA provides a hierarchical memory model that allows programmers to control data locality. The different memory spaces are:
 
 - **Registers:** Private to each thread. Fastest memory on the GPU.
-- **Shared Memory:** Shared by all threads in a thread block. It is on-chip and provides high-speed access.
+- **Shared Memory:** Shared by all threads in a thread block. It is on-chip and provides high-speed access. Shared memory is allocated using the `__shared__` memory space specifier. 
 - **Global Memory:** The main GPU memory. It is large but has higher latency. All threads can access global memory.
 - **Constant Memory:** Read-only memory for all threads. It is cached and provides high-bandwidth access when all threads in a warp access the same location.
 - **Texture Memory:** Read-only memory optimized for 2D spatial access patterns.
@@ -23,6 +23,11 @@ CUDA provides a hierarchical memory model that allows programmers to control dat
 - **Unified Memory:** A single unified memory pool that is a single pointer value enables across host and device.
 
 One thing to remember is that CUDA programming model assumes a system composed of a host and a device, each with their **separate memory**. Kernels operate out of device memory, so the CUDA runtime provides functions to allocate, deallocate, and transfer memory between host and device.
+
+#### L2 Cache Management
+
+- **Persisting**: when a kernel access a data region in the global memory repeatedly. This data region in the L2 cache will be called L2 Cache set-aside.
+- **Streaming**: when a kernel access a data region once.
 
 ### Thread Hierarchy
 
