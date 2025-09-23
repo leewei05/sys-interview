@@ -29,6 +29,29 @@ One thing to remember is that CUDA programming model assumes a system composed o
 - **Persisting**: when a kernel access a data region in the global memory repeatedly. This data region in the L2 cache will be called L2 Cache set-aside.
 - **Streaming**: when a kernel access a data region once.
 
+#### Page-Locked Host Memory
+
+- Pinned host memory that are managed by `cudaHostAlloc()` and `cudaFreeHost()`. There are several benefits using page-locked host memory:
+  - Copies between page-locked host and device memory can performed concurrently
+  - On some devices, page-locked memory can directly be mapped into the address space of the device
+
+#### Write-Combining Memory
+
+- Passing flag `cudaHostAllocWriteCombined` to `cudaHostAlloc`. Write-combining memory frees up the hosts' L1 and L2 caches. In addition, write-combining memory is not snooped during transfers across the PCIe bus, which means that the data in write-combining memory can stay a bit longer than normal L1 and L2 caches, leading to performance gain.
+
+#### Mapped Memory
+
+- Passing flag `cudaHostAllocMapped` to `cudaHostAlloc` to map page-locked host memory to device memory. Device can retrieve mapped memory address with `cudaHostGetDevicePointer()`.
+  - There is no need to allocate a lock in device memory and copy data between host and device.
+  - There is no need to use streams to overlap data transfers with kernel execution.
+
+#### Memory Fence Interference
+
+Some CUDA application may see degraded performance due to memory fence/flush operations waiting on other transactions.
+
+- `thread_scope_device`: The memory ordering is guaranteed at the device level.
+- `thread_scope_system`: The memory oridering is guaranteed to the device and host.
+
 ### Thread Hierarchy
 
 CUDA organizes threads into a three-level hierarchy:
