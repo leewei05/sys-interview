@@ -111,4 +111,5 @@
 - [Warps](./arch/cuda/README.md#warps)
 - [CUDA Memory Model](./arch/cuda/README.md#cuda-memory-model)
 - [Thread Hierarchy](./arch/cuda/README.md#thread-hierarchy)
-- [SIMT](./arch/README.md#simt)
+- [SIMT](./arch/cuda/README.md#simt)
+- [Compilation Workflow](./arch/cuda/README.md#compilation-workflow)

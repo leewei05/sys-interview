@@ -22,6 +22,8 @@ CUDA provides a hierarchical memory model that allows programmers to control dat
 - **Distributed Shared Memory:** Shared memory of all thread blocks in a cluster.
 - **Unified Memory:** A single unified memory pool that is a single pointer value enables across host and device.
 
+One thing to remember is that CUDA programming model assumes a system composed of a host and a device, each with their **separate memory**. Kernels operate out of device memory, so the CUDA runtime provides functions to allocate, deallocate, and transfer memory between host and device.
+
 ### Thread Hierarchy
 
 CUDA organizes threads into a three-level hierarchy:
@@ -37,3 +39,10 @@ This hierarchical organization allows for scalable parallelism. The number of th
 ### SIMT
 
 **Single Instruction, Multiple Threads** is a software-level abstraction of SIMD, most famously used by NVIDIA GPUs. It presents a programming model where multiple independent threads execute the same program concurrently. The GPU hardware then groups these threads into "warps" and schedules them for execution on SIMD units.
+
+### Compilation Workflow
+
+`nvcc` a closed-source compiler that compiles `PTX` to binary (cubin object).
+
+- offline compilation: compiles source code into a mix of host code and device code.
+- Just-in-Time compilation: device driver compiles `PTX` code at runtime to binary. It is more cache friendly, since the device driver will cache a copy. 
