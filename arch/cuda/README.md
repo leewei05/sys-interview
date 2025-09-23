@@ -33,3 +33,7 @@ CUDA organizes threads into a three-level hierarchy:
 3.  **Grid:** A collection of thread blocks that execute the same kernel. The grid is the highest level of the hierarchy. The dimensions of the grid are specified by `gridDim`.
 
 This hierarchical organization allows for scalable parallelism. The number of threads per block and the number of blocks per grid can be adjusted to fit the specific GPU architecture and the problem being solved. All threads in a grid execute the same kernel code.
+
+### SIMT
+
+**Single Instruction, Multiple Threads** is a software-level abstraction of SIMD, most famously used by NVIDIA GPUs. It presents a programming model where multiple independent threads execute the same program concurrently. The GPU hardware then groups these threads into "warps" and schedules them for execution on SIMD units.

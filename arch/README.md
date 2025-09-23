@@ -12,10 +12,6 @@
 - Vertical operations apply the same instructions to a vector of data. `[A, B, C, D] * 2 -> [A*2, B*2, C*2, D*2]`
 - Horizontal operations combine elements within a single vector. `[A, B, C, D] -> A + B + C + D`
 
-### SIMT
-
-**Single Instruction, Multiple Threads** is a software-level abstraction of SIMD, most famously used by NVIDIA GPUs. It presents a programming model where multiple independent threads execute the same program concurrently. The GPU hardware then groups these threads into "warps" and schedules them for execution on SIMD units.
-
 ### CPU vs GPU
 
 | Feature | CPU (Central Processing Unit) | GPU (Graphics Processing Unit) |

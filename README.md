@@ -96,7 +96,6 @@
 
 - [Memory Ordering](./arch/README.md#memory-ordering)
 - [SIMD](./arch/README.md#simd)
-- [SIMT](./arch/README.md#simt)
 - [CPU vs GPU](./arch/README.md#cpu-vs-gpu)
 - Speculative Execution
 - Instruction Pointer Prediction
@@ -108,3 +107,4 @@
 - [Warps](./arch/cuda/README.md#warps)
 - [CUDA Memory Model](./arch/cuda/README.md#cuda-memory-model)
 - [Thread Hierarchy](./arch/cuda/README.md#thread-hierarchy)
+- [SIMT](./arch/README.md#simt)
