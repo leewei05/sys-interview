@@ -26,3 +26,16 @@ MLIR's Dialect Conversion framework is used to transform operations from one dia
 A common use case is **partial lowering**, where only a subset of operations are lowered to a different dialect. For example, you might lower compute-intensive operations to the Affine and Arith dialects for optimization, while keeping other operations like a print function in the original dialect.
 
 Note that lowering from a value-type to a buffer-type representation is a common pattern in MLIR.
+
+### Commonly Used Dialects
+
+- linalg
+- tensor
+- memref
+- arith
+- math
+- vector
+- scf
+- cf
+- llvm
+- spv

@@ -77,6 +77,10 @@
 - [What problem does MLIR solve](./compilers/mlir/README.md#what-problem-does-mlir-solve)
 - [Operation Definition Specification](./compilers/mlir/README.md#operation-definition-specification)
 - [Dialect Conversions](./compilers/mlir/README.md#dialect-conversions)
+- [Commonly Used Dialects](./compilers/mlir/README.md#commonly-used-dialects)
+- Operations with payloads
+- bufferization
+- Diagnostic tests
 
 ## OS
 
